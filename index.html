@@ -1,38 +1,155 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>#solxmagnus</title>
+    <meta charset="utf-8">
     <meta name="google-site-verification" content="nnu18tc6_XBBZzi70JRXEWtKjelHQ2Sw3KTdCxQm9QY" />
+    <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3 {
+      font-weight: normal;
+    }
+    body {
+      background: #333E42;
+      font-family: baskerville, serif;
+      color: white;
+      line-height: 1.4;
+      text-rendering: optimizeLegibility;
+      text-size-adjust: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .header {
+      width: 827px;
+      max-width: 100%;
+      margin: 2em auto 3em;
+      display: block;
+    }
+    .inner {
+      margin: 20px auto;
+      padding: 20px;
+      width: 580px;
+      max-width: 100%;
+    }
+    h2 {
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      font-size: 13pt;
+    }
+    h3.fadeout {
+      top: -10px;
+      position: relative;
+      white-space: nowrap;
+      opacity: 0.6;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    h3.fadeout:after {
+      content:"";
+      position: absolute;
+      height: 100%;
+      width: 250px;
+      right: 0;
+      background: linear-gradient(90deg, rgba(51,62,66,0), #333E42);
+    }
+    .input {
+      border: 1px solid #131E24;
+      border-radius: 3px;
+      padding: 5px;
+      font-family: baskerville, serif;
+      font-size: 18pt;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    .submit {
+      border: 0;
+      border-radius: 3px;
+      background: #C09994;
+      font-family: baskerville, serif;
+      color: white;
+      font-size: 15pt;
+      padding: 5px 15px 7px;
+      font-weight: bold;
+    }
+    .intro {
+      margin: 0 0 3em;
+    }
+    .attending {
+      margin-bottom: 2em;
+    }
+    .radio {
+      margin-bottom: 0.5em;
+      position: relative;
+    }
+    .radio label {
+      font-size: 15pt;
+    }
+    .radio label>span {
+      position: absolute;
+      left: 30px;
+      top: 2px;
+    }
+    .english {
+      opacity: .4;
+    }
+    .english:before {
+      content: " / ";
+    }
+    .info {
+      margin: 5em 0;
+    }
+    .info h3 {
+      margin-bottom: .5em;
+      font-weight: bold;
+    }
+
+    </style>
   </head>
   <body>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSevQqWY3FM5PHRh2fyMD0oG4mmK45p8gvVatFMUuRrM0-_TGg/formResponse" method="post" name="mG61Hd" target="_self">
-      <p>Elsku vinir, vinsamlegast skráið hér hvort þið komist eða komist ekki í brúðkaup okkar þann 12.11.2016.</p>
-      <div>Attending?</div>
-      <div>
-        <label>
-          <input type="radio" name="entry.919632982" value="Yes"> Yes
-        </label>
-      </div>
-      <div>
-        <label>
-          <input type="radio" name="entry.919632982" value="No"> No
-        </label>
-      </div>
-      <div>Full name</div>
-      <div>
-        <input name="entry.223505743" autocomplete="off" dir="auto" required="" tabindex="0" type="text" value="">
-      </div>
-      <div>Partner</div>
-      <div>
-        <input name="entry.1967840559" aria-label="Partner" autocomplete="off" dir="auto" tabindex="0" type="text" value="">
-      </div>
-      <div>Special wishes</div>
-      <div>
-        <textarea name="entry.1253936908" class="quantumWizTextinputPapertextareaInput exportTextarea" dir="auto" rows="1" tabindex="0"></textarea>
-      </div>
-      <div>
-        <input type="submit" value="Senda">
-      </div>
-    </form>
+    <img class=header src="header.png">
+    <div class=inner>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSevQqWY3FM5PHRh2fyMD0oG4mmK45p8gvVatFMUuRrM0-_TGg/formResponse" method="post" name="mG61Hd" target="_self">
+        <p class=intro>Elsku vinir, vinsamlegast skráið hér hvort þið komist eða komist ekki í brúðkaup okkar þann 12.11.2016.</p>
+        <div class=attending>
+          <div class=radio>
+            <label>
+              <input type="radio" name="entry.919632982" value="Yes"> <span>Já ég mæti <span class=english>Attending</span></span>
+            </label>
+          </div>
+          <div class=radio>
+            <label>
+              <input type="radio" name="entry.919632982" value="No"> <span>Kemst ekki <span class=english>Can’t make it</span></span>
+            </label>
+          </div>
+        </div>
+        <h2>Fullt nafn <span class=english>Full name</span></h2>
+        <div>
+          <input class=input name="entry.223505743" autocomplete="off" type="text" value="">
+        </div>
+        <h2>Maki <span class=english>Partner</span></h2>
+        <div>
+          <input class=input name="entry.1967840559" autocomplete="off" type="text" value="">
+        </div>
+        <h2>Sérstakar óskir <span class=english>Special wishes</span></h2>
+        <h3 class=fadeout>Ofnæmi? Vegan? Vegetarian? Pescaterian? Hatar Sálina? Paleo? Atkins? Raw?</h3>
+        <div>
+          <textarea class=input name="entry.1253936908"></textarea>
+        </div>
+        <div>
+          <input class=submit type="submit" value="Senda">
+        </div>
+
+        <div class=info>
+          <h3>Upplýsingar</h3>
+          <p class=intro>Elsku vinir, vinsamlegast skráið hér hvort þið komist eða komist ekki í brúðkaup okkar þann 12.11.2016.</p>
+        <div>
+      </form>
+    </div>
   </body>
 </html>
